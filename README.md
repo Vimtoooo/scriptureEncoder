@@ -32,10 +32,20 @@ This program utilizes the function `encodeScripture` that receives `script_line`
 |        `code`         | Represents each ASCII code inside the `ASCII_LIST`.                                                              |
 |     `conversion`      | Concatenates with the current base conversion type, specified by the `target_base` variable.                     |
 |      `remainder`      | Stored the current remainder from the module operator of `target_base`.                                          |
-| `reversed_conversion` | Contains the `conversion` variable and reverses it.                                                              |
+| `reversed_conversion` | Contains the `conversion` variable in reverse.                                                                   |
 
 ---
 
 ## 📊 Result:
 
 The function returns a string where each character of `script_line` is converted to its ASCII code and then to the `target_base`, separated by spaces for each seperate ASCII code.
+
+## ⚖️ License:
+This repository consists by the **MIT LICENSE!** Read the **LICENSE** for more information.
+
+## ✨ Origin of the project initialization:
+This project was made possible by the infamous website called **Coddy**, which primarily helps programers like me improve in their coding skills everyday!
+
+New to coding? Check out their website to start learning today: https://coddy.tech
+
+My profile: https://coddy.tech/user/LqpbAz0EAJXP2OZK9kNN3UMUzRh1
