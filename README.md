@@ -2,12 +2,12 @@
 
 ## 📝 Project info
 
-This program utilizes the function `encodeScripture` that receives `script_line` and `target_base` as its parameters. The function encodes a line from a church play script into a different number base representation, converting each character in the parameter **'script_line'** to its **ASCII code** to store it in the list **'ASCII_LIST'**, then converts the ASCII code into the **specified 'target_base'** with the help of the **module 'string' (contains strings with the corresponding base conversions)** and their useful methods. Concatenate the encoded values into a single string, separated by spaces.
+This program utilizes the function `encodeScripture` that receives `script_line` and `target_base` as its parameters. The function encodes a line from a church play script into a different number base representation, converting each character in the parameter `script_line` to its **ASCII code** to store it in the local list `ASCII_LIST`, then converts the ASCII code into the **specified `target_base`** with the help of the **module 'string' (contains strings with the corresponding base conversions)** and their useful methods. Concatenate the encoded values into a single string, separated by spaces.
 
 ## 🛠️ Steps to converting a **decimal number** to a **diffent base**:
 
-1. Initialize an empty string for the result called **'conversion'**;
-2. Repeatedly divide the decimal number by the **'taget_base'** number and track the remainders, while concatenating more strings into the 'conversion' variable;
+1. Initialize an empty string for the result called `conversion`;
+2. Repeatedly divide the decimal number by the `taget_base` number and track the remainders, while concatenating more strings into the `conversion` local variable;
 3. Append the remainders to the result string in reverse order;
 4. For bases **greater than 10**, avail oneself of the letters from **'A' to 'Z' for remainders from 10 to 35**.
 
@@ -20,8 +20,8 @@ This program utilizes the function `encodeScripture` that receives `script_line`
 
 ## 💎 **PARAMETERS:**
 
-- **script_line:** (str) A line from a church play script;
-- **target_base:** (int) The base for conversion **(from 2 to 36 / binary to base-36)**.
+- **`script_line`** (str):  A line from a church play script;
+- **`target_base`** (int):  The base for conversion **(from 2 to 36 / binary to base-36)**.
 
 ## 🏠 **LOCAL VARIABLES:**
 
@@ -38,4 +38,4 @@ This program utilizes the function `encodeScripture` that receives `script_line`
 
 ## 📊 Result:
 
-The function returns a string where each character of **'script_line'** is converted to its ASCII code and then to the **'target_base'**, separated by spaces for each seperate ASCII code.
+The function returns a string where each character of `script_line` is converted to its ASCII code and then to the `target_base`, separated by spaces for each seperate ASCII code.
