@@ -6,19 +6,54 @@ import string
 def encodeScripture(script_line: str, target_base: int) -> str:
     
     if not (script_line or target_base):
+        
         return None
     
     result: str = ""
 
     ASCII_LIST = [ord(char) for char in script_line]
-    ASCII_LENGTH = len(ASCII_LIST)
 
-    for code in ASCII_LIST:
+    if 2 <= target_base <= 9:
         
-        res_int: int = code // target_base
-        remainder: int = code % target_base
-        result += string.digits[remainder] + " "
+        for code in ASCII_LIST:
+        
+            conversion: str = ""
 
+            while code != 0:
+
+                remainder: int = code % target_base
+                conversion += string.digits[remainder]
+                code //= target_base
+        
+            reversed_conversion = conversion[::-1]
+            result += reversed_conversion + " "
     
+    elif 10 <= target_base <= 36:
+        
+        for code in ASCII_LIST:
+        
+            conversion: str = ""
+
+            while code != 0:
+
+                remainder = code % target_base
+
+                if remainder <= 9:
+                    conversion += string.digits[remainder]
+                    
+                else:
+                    conversion += string.ascii_uppercase[remainder - 10]
+
+                code //= target_base
+        
+            reversed_conversion = conversion[::-1]
+            result += reversed_conversion + " "
+    
+    else:
+
+        return None
+
+
+    return result
 
 
